@@ -10,5 +10,7 @@ Installed Flompanage checks this repo automatically for updates.
 
 ## For maintainers
 
-1. Build: `Flompanage\build-installer.bat`
-2. Publish: upload `Flompanage-Setup-X.Y.Z.exe` to a new GitHub release tagged `vX.Y.Z`
+1. Build + publish (installer only, no source on GitHub):
+   `powershell -ExecutionPolicy Bypass -File .\scripts\publish-flompanage-release.ps1 -Build`
+2. Or build manually: `Flompanage\build-installer.bat`, then publish without rebuilding:
+   `powershell -ExecutionPolicy Bypass -File .\scripts\publish-flompanage-release.ps1`
